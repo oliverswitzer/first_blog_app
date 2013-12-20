@@ -3,8 +3,10 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :title
       t.text :body 
-      t.timestaps
-      Post.create(title: "My first post", )
+      t.timestamps
+    end
+    Post.create(title: "My first post", body: "This is the posts content.")
+    Post.create(title: "Poop", body: "More poop.")
   end
 
   def down
